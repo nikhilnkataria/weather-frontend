@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const baseConfig = require('./webpack.base.js');
 
-prodConfig = {
+const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name]-[hash:8]-bundle.js',

@@ -95,7 +95,7 @@ module.exports = {
       minify: true,
       chunksSortMode: 'auto',
       filename: 'index.html',
-      // favicon: 'public/favicon.ico',
+      favicon: 'public/favicon.ico',
       template: 'public/index.html'
     }),
     // new DuplicatePackageCheckerPlugin(),
