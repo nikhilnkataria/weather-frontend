@@ -7,10 +7,10 @@ const baseConfig = require('./webpack.base.js');
 prodConfig = {
   mode: 'production',
   output: {
-    filename: '[name]-[hash]-bundle.js',
+    filename: '[name]-[hash:8]-bundle.js',
     path: path.resolve(__dirname, 'build')
   },
-  plugins: [ new CleanWebpackPlugin() ]
+  plugins: [new CleanWebpackPlugin()]
 };
 
 module.exports = merge(baseConfig, prodConfig);

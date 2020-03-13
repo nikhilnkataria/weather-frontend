@@ -9,7 +9,7 @@ module.exports = {
     main: './src/index.jsx'
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ]
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [ '@babel/react', '@babel/env' ],
+              presets: ['@babel/react', '@babel/env'],
               plugins: [
                 '@babel/proposal-class-properties',
                 '@babel/proposal-object-rest-spread'
@@ -102,7 +102,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // filename: 'public/css/[name]-[hash:8].css',
       // chunkFilename: 'public/css/[name]-[hash:8].chunk.css'
-      filename: '[name]-[hash].css',
+      filename: '[name]-[hash:8].css',
       chunkFilename: '[id].css'
     })
   ]

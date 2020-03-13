@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "npm": "6.14.2",
+    "node": "v13.10.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
@@ -52,8 +55,10 @@
     "react": "^16.13.0",
     "react-content-loader": "^5.0.2",
     "react-dom": "^16.13.0",
+    "react-loadable": "^5.5.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "spinkit": "^2.0.1"
   }
 }

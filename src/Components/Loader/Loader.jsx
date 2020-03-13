@@ -9,11 +9,10 @@ const loaderSpecs = {
   defaultHeight: '20'
 };
 
-// TODO: Remove below eslint disable rule once more than 1 export created
-// eslint-disable-next-line import/prefer-default-export
 export const UserLoader = () => (
   <ContentLoader
     height={285}
+    width="100%"
     speed={loaderSpecs.speed}
     primarycolor={loaderSpecs.primaryColor}
     secondarycolor={loaderSpecs.secondaryColor}
@@ -67,4 +66,18 @@ export const UserLoader = () => (
       height={loaderSpecs.defaultHeight}
     />
   </ContentLoader>
+);
+
+export const PageLoader = () => (
+  // eslint-disable-next-line object-curly-newline
+  <div style={{ marginLeft: '50%', marginTop: '100px' }}>
+    <div className="sk-chase">
+      <div className="sk-chase-dot" />
+      <div className="sk-chase-dot" />
+      <div className="sk-chase-dot" />
+      <div className="sk-chase-dot" />
+      <div className="sk-chase-dot" />
+      <div className="sk-chase-dot" />
+    </div>
+  </div>
 );
