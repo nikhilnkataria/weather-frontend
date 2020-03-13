@@ -7,10 +7,10 @@ import {
 
 // TODO: Remove disable next line lint once more than 1 services is implemented
 // eslint-disable-next-line import/prefer-default-export
-export const fetchCityWeather = (cityId) => (dispatch) => {
+export const fetchCityWeather = (params) => (dispatch) => {
   dispatch(weatherFetchStarted());
   return weatherAxios
-    .get(`/id/${cityId}`)
+    .get('/', { params })
     .then((resp) => {
       // console.info(resp.data.data);
       dispatch(setWeatherData(resp.data));

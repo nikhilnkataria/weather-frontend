@@ -27,11 +27,11 @@ class CityList extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.fetchCityWeather(this.props.cities[0].id);
+    this.props.fetchCityWeather({ cityId: this.props.cities[0].id });
   }
 
   handleOnCityChange = (e) => {
-    this.props.fetchCityWeather(e.target.value);
+    this.props.fetchCityWeather({ cityId: e.target.value });
   };
 
   render() {
