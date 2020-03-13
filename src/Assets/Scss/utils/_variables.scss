@@ -1,0 +1,75 @@
+// export const ThemeVariables = {
+//     colors: {
+//       primary: '#43ace3',
+//       primaryDark: '#274a9d',
+//       colorAccent: '#000000',
+//       backgroundColor: '#F8F8F8',
+//       dangerColor: '#ff0000',
+//       warningColor: '#ffa500'
+//     },
+//     typography: {
+//       font: {
+//         baseFont: '16px',
+//         h1: '1.611rem',
+//         h2: '1.464rem',
+//         h3: '1.331rem',
+//         h4: '1.21rem',
+//         h5: '1.1rem',
+//         h6: '1rem',
+//         small: '0.909rem',
+//         xs: '0.826rem',
+//         xxs: '0.751rem',
+//         headerFontFamily: 'Gotham Rounded Medium',
+//         bodyFontFamily: 'Gotham Rounded Book'
+//       },
+//       lineHeight: {
+//         body: 1.45,
+//         headers: 1.15
+//       }
+//     },
+//     header: {
+//       height: '56px',
+//       backgroundColor: '#fff'
+//     },
+//     sidebar: {
+//       backgroundColor: '#fff',
+//       width: '258px'
+//     },
+//     gridBreakPoints: {
+//       xs: '320px',
+//       sm: '480px',
+//       md: '768px',
+//       lg: '1024px',
+//       xl: '1200px'
+//     },
+//     borderRadius: 0,
+//     borderColor: '#0000001a'
+//   };
+
+// ======= COLORS ======= //
+$color-primary: #43ace3;
+$color-primary-dark: #274a9d;
+$color-body-bg: #f8f8f8;
+$color-danger: #ff0000;
+$color-warning: #ffa500;
+$border-color: #0000001a;
+
+// ======= TYPOGRAPHY ======= //
+
+$font-html-size: 16px;
+$font-h1: 1.611rem;
+$font-h2: 1.464rem;
+$font-h3: 1.331rem;
+$font-h4: 1.21rem;
+$font-h5: 1.1rem;
+$font-h6: 1rem;
+
+$font-small: 0.909rem;
+$font-xs: 0.826rem;
+$font-xxs: 0.751rem;
+
+$lineheight-body: 1.45;
+$lineheight-headers: 1.15;
+
+// ======= BORDER ======= //
+$border-radius: 0;

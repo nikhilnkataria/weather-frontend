@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "commonjs": true
+  },
+  "rules": {
+    // disable unnecessary required comma at end of array or obj
+    "comma-dangle": ["error", "never"],
+    // allow spacing between brackets
+    "array-bracket-spacing": "off",
+    // allow object new line for multi line objects
+    "object-curly-newline": ["error", {"multiline": true, "minProperties": 2}],
+    // "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "arrow-body-style": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    // disable shorthand rule for react fragments
+    "react/jsx-fragments": "off",
+    "react/destructuring-assignment": "off",
+    "max-len": ["error", { "code": 100 }],
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "consistent-return": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off"
+  }
+}

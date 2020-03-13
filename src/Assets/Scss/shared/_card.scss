@@ -1,0 +1,22 @@
+.card {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 15px, rgba(0, 0, 0, 0.04) 0px 1px 6px;
+  border: initial;
+  border-radius: $border-radius;
+  margin-bottom: 20px;
+
+  &-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0;
+  }
+
+  &-title {
+    margin-bottom: 0;
+    padding: 15px 15px 8px;
+  }
+
+  //   &-body {
+  //     // padding-top: 0;
+  //   }
+}
