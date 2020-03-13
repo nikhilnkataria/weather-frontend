@@ -6,7 +6,7 @@ Weather frontend application is build on below mentioned modules
   - Redux 
   - React Loadable for Code Splitting / Dynamic Code Import
   - Bootstrap 4 for Responsive Web Application
-  - Sass for CSS Preprocessing
+  - Sass for CSS Pre-processing
   - Webpack 4 for module bundling
   - Integrated Open Weather APIs for weather data
   - Chartjs 2 for charts
