@@ -12,7 +12,7 @@ class City extends PureComponent {
     return (
       <React.Fragment>
         <CityList />
-        <div className="row city-detail-wrapper">
+        <div className="row city-wrapper">
           <div className="col-md-3">
             <CityWeatherDetails
               details={this.props.details}
@@ -21,9 +21,10 @@ class City extends PureComponent {
           </div>
 
           <div className="col-md-9">
-            {!_.isEmpty(this.props.list) && (
-              <WeatherChart list={this.props.list} />
-            )}
+            <WeatherChart
+              list={this.props.list}
+              fetchingWeatherDetails={this.props.fetchingWeatherDetails}
+            />
           </div>
         </div>
       </React.Fragment>

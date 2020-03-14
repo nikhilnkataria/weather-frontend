@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react';
 import Utils from '../../Helpers/Utils';
 import Card from '../../Components/Card/Card';
 import LineChart from '../../Components/Charts/LineChart';
+import { UserLoader } from '../../Components/Loader/Loader';
 
 export default class WeatherChart extends PureComponent {
   chartRef = React.createRef();
@@ -51,18 +52,28 @@ export default class WeatherChart extends PureComponent {
   render() {
     return (
       <Card title="Weather Forecasts">
-        <div style={{ height: '400px' }}>
-          <LineChart
-            options={this.dailyTransactionsOptions}
-            data={this.generateDailyTxnData()}
-          />
+        <div className="weather-chart-wrapper">
+          {this.props.list.length > 0 &&
+          this.props.fetchingWeatherDetails === false && (
+            <LineChart
+              options={this.dailyTransactionsOptions}
+              data={this.generateDailyTxnData()}
+            />
+          )}
+
+          {this.props.fetchingWeatherDetails === true && <UserLoader />}
+
+          {this.props.list.length === 0 &&
+          this.props.fetchingWeatherDetails === false && (
+            <p>Unable to fetch transaction data</p>
+          )}
         </div>
       </Card>
     );
   }
 }
 
-// eslint-disable-next-line object-curly-newline
 WeatherChart.propTypes = {
+  fetchingWeatherDetails: PropTypes.bool.isRequired,
   list: PropTypes.arrayOf(PropTypes.oneOfType([ PropTypes.any ])).isRequired
-}; // eslint-disable-line object-curly-newline
+};

@@ -1,5 +1,4 @@
 import thunk from 'redux-thunk';
-// eslint-disable-next-line object-curly-newline
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 
 import weather from '../Reducers/weather';

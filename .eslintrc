@@ -13,8 +13,7 @@
     // allow spacing between brackets
     "array-bracket-spacing": "off",
     // allow object new line for multi line objects
-    "object-curly-newline": ["error", {"multiline": true, "minProperties": 2}],
-    // "object-curly-newline": "off",
+    "object-curly-newline": "off",
     "operator-linebreak": "off",
     "arrow-body-style": "off",
     "jsx-a11y/click-events-have-key-events": "off",

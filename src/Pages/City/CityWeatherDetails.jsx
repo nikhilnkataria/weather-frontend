@@ -18,11 +18,14 @@ export default class CityWeatherDetails extends PureComponent {
               <div className="clearfix">
                 <span className="float-left">Wind</span>
                 <span className="float-right">
-                  {details.wind && details.wind.speed}
-                  meter/sec
-                  <br />
-                  {details.wind && details.wind.deg}
-                  %
+                  <span>
+                    {details.wind && details.wind.speed}
+                    meter/sec,
+                  </span>
+                  <span className="ml-1">
+                    {details.wind && details.wind.deg}
+                    (deg)
+                  </span>
                 </span>
               </div>
             </li>
@@ -71,6 +74,10 @@ export default class CityWeatherDetails extends PureComponent {
           </ul>
         )}
         {this.props.fetchingWeatherDetails === true && <UserLoader />}
+        {_.isEmpty(this.props.details) &&
+        this.props.fetchingWeatherDetails === false && (
+          <p>Unable to fetch weather details. Please try again later</p>
+        )}
       </Card>
     );
   }

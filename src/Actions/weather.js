@@ -1,7 +1,8 @@
 import {
   WEATHER_FETCH_STARTED,
   WEATHER_FETCH_ENDED,
-  SET_WEATHER_DATA
+  SET_WEATHER_DATA,
+  REMOVE_WEATHER_DATA
 } from './types';
 
 export const weatherFetchStarted = () => {
@@ -17,4 +18,11 @@ export const setWeatherData = (weatherData) => {
     type: SET_WEATHER_DATA,
     weatherData
   };
+};
+
+/**
+ * Removes already stored weather data. Call this incase new weather data doesnt come from API
+ */
+export const removeWeatherData = () => {
+  return { type: REMOVE_WEATHER_DATA };
 };

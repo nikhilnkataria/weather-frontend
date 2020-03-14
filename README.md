@@ -5,13 +5,25 @@ Weather frontend application is build on below mentioned modules
   - React 16
   - Redux 
   - React Loadable for Code Splitting / Dynamic Code Import
-  - Bootstrap 4 for Responsive Web Application
-  - Sass for CSS Preprocessing
   - Webpack 4 for module bundling
+  - Sass for CSS Preprocessing
+  - ESLint by AirBnB (Modified rules according to requirement)
   - Integrated Open Weather APIs for weather data
+  - Bootstrap 4 for Responsive Web Application      
   - Chartjs 2 for charts
   - Axios for API Integration
   - React Content Loader for Facebook like loading effect
+
+# Webpack Modules/Plugins/Loaders Used
+  - Webpack Merge
+  - Webpack Dev Server (For Development)
+  - Webpack Dashboard (For Development)
+  - HTML Webpack Plugin
+  - Mini Css Extract Plugin
+  - Babel Loader
+  - File Loader
+  - CSS Loader
+  - Scss Loader  
 
 # Features to Integrate
 

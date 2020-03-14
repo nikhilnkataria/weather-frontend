@@ -1,8 +1,10 @@
 import weatherAxios from '../Config/weatherAxios';
+import Notification from '../Helpers/Notification';
 import {
   weatherFetchStarted,
   weatherFetchEnded,
-  setWeatherData
+  setWeatherData,
+  removeWeatherData
 } from '../Actions/weather';
 
 // TODO: Remove disable next line lint once more than 1 services is implemented
@@ -12,9 +14,19 @@ export const fetchCityWeather = (params) => (dispatch) => {
   return weatherAxios
     .get('/', { params })
     .then((resp) => {
-      // console.info(resp.data.data);
       dispatch(setWeatherData(resp.data));
       return resp.data;
+    })
+    .catch((err) => {
+      const { response, code } = err;
+      dispatch(removeWeatherData());
+      if (code !== 'ECONNABORTED') {
+        Notification.showNotification(
+          'danger',
+          `Error: ${response.statusText}`,
+          response.data.message
+        );
+      }
     })
     .finally(() => {
       dispatch(weatherFetchEnded());

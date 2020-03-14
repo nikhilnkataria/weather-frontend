@@ -1,7 +1,8 @@
 import {
   WEATHER_FETCH_STARTED,
   WEATHER_FETCH_ENDED,
-  SET_WEATHER_DATA
+  SET_WEATHER_DATA,
+  REMOVE_WEATHER_DATA
 } from '../Actions/types';
 
 const initialWeatherState = {
@@ -25,6 +26,11 @@ export default (state = initialWeatherState, action) => {
       return {
         ...state,
         weatherData: action.weatherData
+      };
+    case REMOVE_WEATHER_DATA:
+      return {
+        ...state,
+        weatherData: {}
       };
     default:
       return state;

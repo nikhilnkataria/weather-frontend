@@ -1,4 +1,4 @@
-.city-detail-wrapper {
+.city-wrapper {
   ul.weather-details-ul {
     margin: 0;
     padding: 0;
@@ -6,11 +6,16 @@
 
     li {
       border-bottom: 1px solid $border-color;
-      padding: 10px 0px;
+      padding: 12px 0px 14px;
 
       &:last-child {
         border-bottom: none;
       }
     }
+  }
+
+  .weather-chart-wrapper {
+    min-height: 55px;
+    max-height: 420px;
   }
 }

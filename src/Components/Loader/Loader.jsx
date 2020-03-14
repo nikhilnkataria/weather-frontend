@@ -69,7 +69,6 @@ export const UserLoader = () => (
 );
 
 export const PageLoader = () => (
-  // eslint-disable-next-line object-curly-newline
   <div style={{ marginLeft: '50%', marginTop: '100px' }}>
     <div className="sk-chase">
       <div className="sk-chase-dot" />
