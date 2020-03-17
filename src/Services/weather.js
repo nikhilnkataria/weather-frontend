@@ -12,7 +12,7 @@ import {
 export const fetchCityWeather = (params) => (dispatch) => {
   dispatch(weatherFetchStarted());
   return weatherAxios
-    .get('/', { params })
+    .get('', { params })
     .then((resp) => {
       dispatch(setWeatherData(resp.data));
       return resp.data;
@@ -20,12 +20,16 @@ export const fetchCityWeather = (params) => (dispatch) => {
     .catch((err) => {
       const { response, code } = err;
       dispatch(removeWeatherData());
-      if (code !== 'ECONNABORTED') {
-        Notification.showNotification(
-          'danger',
-          `Error: ${response.statusText}`,
-          response.data.message
-        );
+      if (code === 'undefined' || code !== 'ECONNABORTED') {
+        const title =
+          response && response.statusText
+            ? `Error: ${response.statusText}`
+            : 'Error';
+        const msg =
+          response && response.data
+            ? response.data.message
+            : 'There was some error while fetching data';
+        Notification.showNotification('danger', title, msg);
       }
     })
     .finally(() => {

@@ -4,7 +4,7 @@ const ENVIRONMENT_VARIABLES = {
     apiUrl: 'http://localhost:3002/'
   },
   production: {
-    apiUrl: 'http://localhost:3002/'
+    apiUrl: 'http://134.122.126.73/'
   }
 };
 

@@ -1,8 +1,7 @@
 // eslint-disable
-
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -101,6 +100,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[hash:8].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    // Ignore all locale files of moment.js
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 };

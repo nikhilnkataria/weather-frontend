@@ -15,7 +15,13 @@ try {
       return response.data;
     },
     (error) => {
-      if (error.code === 'ECONNABORTED') {
+      if (!error.response) {
+        Notification.showNotification(
+          'danger',
+          'Network Error',
+          'Unable to connect the server. Please try again after some time.'
+        );
+      } else if (error.code === 'ECONNABORTED') {
         Notification.showNotification(
           'danger',
           'Network Error',

@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
@@ -11,7 +11,7 @@ export default class CityWeatherDetails extends PureComponent {
     const { details } = this.props;
     return (
       <Card title="Weather Details">
-        {!_.isEmpty(this.props.details) &&
+        {!isEmpty(this.props.details) &&
         this.props.fetchingWeatherDetails === false && (
           <ul className="weather-details-ul">
             <li>
@@ -74,7 +74,7 @@ export default class CityWeatherDetails extends PureComponent {
           </ul>
         )}
         {this.props.fetchingWeatherDetails === true && <UserLoader />}
-        {_.isEmpty(this.props.details) &&
+        {isEmpty(this.props.details) &&
         this.props.fetchingWeatherDetails === false && (
           <p>Unable to fetch weather details. Please try again later</p>
         )}

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Loadable from 'react-loadable';
 import React, { PureComponent } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';

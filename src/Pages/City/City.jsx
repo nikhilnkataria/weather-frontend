@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
@@ -13,14 +13,14 @@ class City extends PureComponent {
       <React.Fragment>
         <CityList />
         <div className="row city-wrapper">
-          <div className="col-md-3">
+          <div className="col-md-5 col-lg-4">
             <CityWeatherDetails
               details={this.props.details}
               fetchingWeatherDetails={this.props.fetchingWeatherDetails}
             />
           </div>
 
-          <div className="col-md-9">
+          <div className="col-md-7 col-lg-8">
             <WeatherChart
               list={this.props.list}
               fetchingWeatherDetails={this.props.fetchingWeatherDetails}
@@ -39,10 +39,10 @@ City.propTypes = {
 };
 
 const mapStateToProps = ({ weather }) => {
-  const details = _.isEmpty(weather.weatherData)
+  const details = isEmpty(weather.weatherData)
     ? {}
     : weather.weatherData.details;
-  const list = _.isEmpty(weather.weatherData) ? [] : weather.weatherData.list;
+  const list = isEmpty(weather.weatherData) ? [] : weather.weatherData.list;
   return {
     list,
     details,

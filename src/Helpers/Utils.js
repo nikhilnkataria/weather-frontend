@@ -1,4 +1,5 @@
-import _ from 'lodash';
+import toLower from 'lodash/toLower';
+import startCase from 'lodash/startCase';
 import moment from 'moment';
 
 export default class Utils {
@@ -16,6 +17,6 @@ export default class Utils {
    * @param {String} str
    */
   static capitalizeStr(str) {
-    return _.startCase(_.toLower(str));
+    return startCase(toLower(str));
   }
 }

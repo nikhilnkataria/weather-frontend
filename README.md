@@ -14,7 +14,7 @@ Weather frontend application is build on below mentioned modules
   - Axios for API Integration
   - React Content Loader for Facebook like loading effect
 
-# Webpack Modules/Plugins/Loaders Used
+### Webpack Modules/Plugins/Loaders Used
   - Webpack Merge
   - Webpack Dev Server (For Development)
   - Webpack Dashboard (For Development)
@@ -25,7 +25,7 @@ Weather frontend application is build on below mentioned modules
   - CSS Loader
   - Scss Loader  
 
-# Features to Integrate
+### Features to Integrate
 
   - SSR (Server Side Rendering) for SEO
   - Add Nightmode theme
