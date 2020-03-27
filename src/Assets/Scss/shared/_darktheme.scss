@@ -1,0 +1,27 @@
+body.theme-dark {
+  background-color: $color-dark-body-bg;
+  color: rgba(255, 255, 255, 0.9);
+
+  .weather-app-navbar {
+    background: $color-dark-header-bg;
+  }
+
+  .card {
+    background-color: $color-dark-card-bg;
+
+    &-header {
+      background-color: $color-dark-card-bg;
+      border-color: $color-dark-divider;
+    }
+  }
+
+  .city-wrapper ul.weather-details-ul li {
+    border-color: $color-dark-divider;
+  }
+
+  .ui-builder {
+    .style-body {
+      color: #333;
+    }
+  }
+}
