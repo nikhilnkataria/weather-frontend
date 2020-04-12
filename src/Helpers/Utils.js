@@ -19,4 +19,15 @@ export default class Utils {
   static capitalizeStr(str) {
     return startCase(toLower(str));
   }
+
+  static getDefaultTheme() {
+    const morningLimit = moment({ hour: 6, minute: 59 });
+    const eveningLimit = moment({ hour: 21, minute: 5 });
+    // console.info(moment().format('HH:mm:ss'));
+    // console.info(moment().isAfter(eveningLimit));
+    // console.info(moment().isAfter(morningLimit));
+    return moment().isBefore(morningLimit) && moment().isAfter(eveningLimit)
+      ? 'light'
+      : 'dark';
+  }
 }

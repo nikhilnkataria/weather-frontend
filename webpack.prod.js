@@ -12,7 +12,7 @@ const prodConfig = {
   mode: 'production',
   devtool: '',
   output: {
-    filename: '[name]-[hash:8]-bundle.js',
+    filename: 'js/[name]-[hash:8]-bundle.js',
     path: path.resolve(__dirname, 'build')
   },
   plugins: [

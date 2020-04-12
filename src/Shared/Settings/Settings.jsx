@@ -15,6 +15,7 @@ export default function Settings(props) {
     },
     [ theme ]
   );
+
   return (
     <div className={`ui-builder ${toggleSettings === true ? 'open' : ''}`}>
       <span

@@ -35,7 +35,7 @@ module.exports = {
       // Image loader
       {
         test: /\.(png|jpe?g)$/i,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name() {
             return process.env.NODE_ENV === 'development'
@@ -58,32 +58,17 @@ module.exports = {
           }
         ]
       },
-      // CSS file loader to read file and insert in style tag of header
+      // SCss/Css file loader to read file and insert in style tag of header
       {
-        test: /\.css$/,
+        test: /\.(sc|c)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './'
+              hmr: process.env.NODE_ENV === 'development'
             }
           },
-          'css-loader'
-        ]
-        // use: [ 'style-loader', 'css-loader' ]
-      },
-      {
-        test: /\.scss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: './public/css/'
-            }
-          },
-          // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
           'sass-loader'
         ]
       }
@@ -91,14 +76,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      minify: true,
+      collapseWhitespace: true,
       chunksSortMode: 'auto',
       filename: 'index.html',
       favicon: 'public/favicon.ico',
       template: 'public/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]-[hash:8].css',
+      filename: 'css/[name]-[hash:8].css',
       chunkFilename: '[id].css'
     }),
     // Ignore all locale files of moment.js
