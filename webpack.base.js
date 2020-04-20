@@ -18,14 +18,14 @@ module.exports = {
         use: [
           // babel transpiler
           {
-            loader: 'babel-loader',
-            options: {
-              presets: [ '@babel/react', '@babel/env' ],
-              plugins: [
-                '@babel/proposal-class-properties',
-                '@babel/proposal-object-rest-spread'
-              ]
-            }
+            loader: 'babel-loader'
+            // options: {
+            //   presets: [ '@babel/react', '@babel/env' ],
+            //   plugins: [
+            //     '@babel/proposal-class-properties',
+            //     '@babel/proposal-object-rest-spread'
+            //   ]
+            // }
           },
           // eslint validation
           { loader: 'eslint-loader' }
