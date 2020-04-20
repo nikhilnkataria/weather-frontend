@@ -8,6 +8,8 @@ import './Assets/Scss/app.scss';
 import 'spinkit/spinkit.min.css';
 import { PageLoader } from './Components/Loader/Loader';
 import Header from './Shared/Header/Header';
+import Settings from './Shared/Settings/Settings';
+import ThemeContext from './Context/ThemeContext';
 
 const LoadableCity = Loadable({
   loader: () => import(/* webpackChunkName: "city" */ './Pages/City/City'),
@@ -17,15 +19,39 @@ const LoadableCity = Loadable({
 });
 
 class App extends PureComponent {
+  constructor() {
+    super();
+
+    this.state = {
+      theme: 'light'
+    };
+  }
+
+  updateThemeContext = (theme) => {
+    this.setState(
+      {
+        theme
+      },
+      () => {
+        if (theme === 'dark') {
+          document.body.classList.add('theme-dark');
+        } else {
+          document.body.classList.remove('theme-dark');
+        }
+      }
+    );
+  };
+
   render() {
     return (
-      <React.Fragment>
+      <ThemeContext.Provider value={this.state.theme}>
         <ReactNotification />
         <Header />
         <div className="content-wrapper">
           <LoadableCity />
         </div>
-      </React.Fragment>
+        <Settings updateThemeContext={this.updateThemeContext} />
+      </ThemeContext.Provider>
     );
   }
 }

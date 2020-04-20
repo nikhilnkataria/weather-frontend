@@ -1,4 +1,5 @@
 @import './utils/variables';
+@import './shared/settings';
 @import './shared/header';
 @import './shared/base';
 @import './shared/card';
@@ -6,3 +7,4 @@
 @import './shared/loader';
 
 @import './pages/city';
+@import './shared/darktheme';
