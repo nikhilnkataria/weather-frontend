@@ -1,7 +1,10 @@
-/* eslint-disable */
 const ENVIRONMENT_VARIABLES = {
   development: {
-    apiUrl: 'http://localhost:3002/'
+    // apiUrl: 'http://localhost:3002/',
+    apiUrl: 'http://134.122.126.73/'
+  },
+  test: {
+    apiUrl: 'http://134.122.126.73/'
   },
   production: {
     apiUrl: 'http://134.122.126.73/'
