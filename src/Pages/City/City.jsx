@@ -11,11 +11,12 @@ class City extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <CityList />
+        <CityList data-test="city-list-component" />
         <div className="row city-wrapper">
           <div className="col-md-5 col-lg-4">
             <CityWeatherDetails
               details={this.props.details}
+              data-test="city-weather-details-component"
               fetchingWeatherDetails={this.props.fetchingWeatherDetails}
             />
           </div>
@@ -23,6 +24,7 @@ class City extends PureComponent {
           <div className="col-md-7 col-lg-8">
             <WeatherChart
               list={this.props.list}
+              data-test="weather-chart-component"
               fetchingWeatherDetails={this.props.fetchingWeatherDetails}
             />
           </div>
