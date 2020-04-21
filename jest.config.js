@@ -15,7 +15,10 @@ module.exports = {
   moduleFileExtensions: [ 'js', 'json', 'jsx' ],
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: [ '<rootDir>/enzyme.config.js', 'jest-prop-type-error' ],
+  setupFiles: [
+    '<rootDir>/config/jest/enzyme.config.js',
+    'jest-prop-type-error'
+  ],
 
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
@@ -33,5 +36,12 @@ module.exports = {
   transformIgnorePatterns: [ '<rootDir>/node_modules/' ],
 
   // Indicates whether each individual test should be reported during the run
-  verbose: false
+  verbose: false,
+
+  // Mock Files
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/config/jest/__mocks__/fileMock.js',
+    '\\.(css|scss)$': '<rootDir>/config/jest/__mocks__/styleMock.js'
+  }
 };

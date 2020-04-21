@@ -44,13 +44,19 @@ class App extends PureComponent {
 
   render() {
     return (
-      <ThemeContext.Provider value={this.state.theme}>
-        <ReactNotification />
-        <Header />
-        <div className="content-wrapper">
-          <LoadableCity />
+      <ThemeContext.Provider
+        value={this.state.theme}
+        data-test="context-provider"
+      >
+        <ReactNotification data-test="react-notification" />
+        <Header data-test="header" />
+        <div className="content-wrapper" data-test="content-wrapper">
+          <LoadableCity data-test="loadable-city" />
         </div>
-        <Settings updateThemeContext={this.updateThemeContext} />
+        <Settings
+          data-test="setting-component"
+          updateThemeContext={this.updateThemeContext}
+        />
       </ThemeContext.Provider>
     );
   }

@@ -19,53 +19,62 @@ export const UserLoader = () => {
       height={285}
       width="100%"
       speed={loaderSpecs.speed}
+      data-test="content-loader"
       backgroundColor={themeContext === 'dark' ? '#333' : '#f5f6f7'}
     >
       <rect
         x="0"
         y="0"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="35"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="70"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="105"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="140"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="175"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="210"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
       <rect
         x="0"
         y="245"
+        data-test="content-rect"
         width={loaderSpecs.defaultWidth}
         height={loaderSpecs.defaultHeight}
       />
