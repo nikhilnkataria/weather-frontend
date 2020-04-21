@@ -20,11 +20,12 @@ export default function Settings(props) {
     <div className={`ui-builder ${toggleSettings === true ? 'open' : ''}`}>
       <span
         className="style-logger"
+        data-test="style-logger"
         onClick={() => setToggleSetting(!toggleSettings)}
       >
-        <img src={SettingImg} alt="Setting" />
+        <img src={SettingImg} data-test="setting-img" alt="Setting" />
       </span>
-      <div className="ui-block">
+      <div className="ui-block" data-test="ui-block">
         <div className="style-head">
           <h5 className="mb-0">Settings</h5>
         </div>

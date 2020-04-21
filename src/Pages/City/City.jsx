@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 
-import CityList from './CityList';
-import WeatherChart from './WeatherChart';
-import CityWeatherDetails from './CityWeatherDetails';
+import CityList from './CityList/CityList';
+import WeatherChart from './WeatherChart/WeatherChart';
+import CityWeatherDetails from './CityWeatherDetails/CityWeatherDetails';
 
 class City extends PureComponent {
   render() {

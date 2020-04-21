@@ -1,18 +1,12 @@
 import React from 'react';
-import thunk from 'redux-thunk';
 import { shallow } from 'enzyme';
-import configureStore from 'redux-mock-store';
 
 import City from './City';
-import { findByTestAttr } from '../../Helpers/Test';
-
-const middlewares = [ thunk ];
-const mockStore = configureStore(middlewares);
+import { findByTestAttr, testStore } from '../../Helpers/Test';
 
 const setup = (initialState = {}) => {
-  const store = mockStore(initialState);
-  const wrapper = shallow(<City store={store} />);
-  return wrapper;
+  const store = testStore(initialState);
+  return shallow(<City store={store} />);
 };
 
 describe('City Component', () => {

@@ -12,7 +12,7 @@
     "build": "webpack --config webpack.prod.js",
     "test": "jest --config config/jest/jest.config.js",
     "test:watch": "npm test -- --watch",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --config config/jest/jest.config.js --coverage --colors"
   },
   "keywords": [],
   "author": "Nikhil Kataria <nikhilnkataria@gmail.com>",
@@ -27,6 +27,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-imports": "^2.0.0",
+    "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "enzyme": "^3.11.0",

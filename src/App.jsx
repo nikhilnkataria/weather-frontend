@@ -11,7 +11,7 @@ import Header from './Shared/Header/Header';
 import Settings from './Shared/Settings/Settings';
 import ThemeContext from './Context/ThemeContext';
 
-const LoadableCity = Loadable({
+export const LoadableCity = Loadable({
   loader: () => import(/* webpackChunkName: "city" */ './Pages/City/City'),
   loading() {
     return <PageLoader />;

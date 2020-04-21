@@ -3,7 +3,7 @@ import isEmpty from 'lodash/isEmpty';
 import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 
-import { fetchCityWeather } from '../../Services/weather';
+import { fetchCityWeather } from '../../../Services/weather';
 
 function CityList(props) {
   const [ cityId, setCityId ] = useState(props.cities[0].id);
@@ -28,13 +28,18 @@ function CityList(props) {
           <div className="col-md-7 col-sm-6">
             <select
               id="city-dropdown"
+              data-test="change-city-dropdown"
               onChange={(e) => setCityId(e.target.value)}
               className="form-control form-control-sm select"
             >
               {!isEmpty(props.cities) &&
                 props.cities.map((city) => {
                   return (
-                    <option key={city.id} value={city.id}>
+                    <option
+                      data-test="city-dropdown-option"
+                      key={city.id}
+                      value={city.id}
+                    >
                       {city.name}
                     </option>
                   );

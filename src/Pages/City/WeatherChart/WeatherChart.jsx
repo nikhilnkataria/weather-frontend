@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
-import Utils from '../../Helpers/Utils';
-import Card from '../../Components/Card/Card';
-import LineChart from '../../Components/Charts/LineChart';
-import { UserLoader } from '../../Components/Loader/Loader';
+import Utils from '../../../Helpers/Utils';
+import Card from '../../../Components/Card/Card';
+import LineChart from '../../../Components/Charts/LineChart';
+import { UserLoader } from '../../../Components/Loader/Loader';
 
 export default class WeatherChart extends PureComponent {
   chartRef = React.createRef();
@@ -51,21 +51,26 @@ export default class WeatherChart extends PureComponent {
 
   render() {
     return (
-      <Card title="Weather Forecasts">
+      <Card title="Weather Forecasts" data-test="chart-card">
         <div className="weather-chart-wrapper">
           {this.props.list.length > 0 &&
           this.props.fetchingWeatherDetails === false && (
             <LineChart
+              data-test="line-chart-component"
               options={this.dailyTransactionsOptions}
               data={this.generateDailyTxnData()}
             />
           )}
 
-          {this.props.fetchingWeatherDetails === true && <UserLoader />}
+          {this.props.fetchingWeatherDetails === true && (
+            <UserLoader data-test="user-loader" />
+          )}
 
           {this.props.list.length === 0 &&
           this.props.fetchingWeatherDetails === false && (
-            <p>Unable to fetch transaction data</p>
+            <p data-test="unable-to-fetch-msg">
+              Unable to fetch transaction data
+            </p>
           )}
         </div>
       </Card>
