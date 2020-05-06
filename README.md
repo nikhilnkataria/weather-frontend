@@ -6,6 +6,7 @@ Weather frontend application is build on below mentioned modules
   - Redux 
   - React Loadable for Code Splitting / Dynamic Code Import
   - Webpack 4 for module bundling
+  - Test Cases using Jest and Enzyme 
   - Sass for CSS Preprocessing
   - ESLint by AirBnB (Modified rules according to requirement)
   - Integrated Open Weather APIs for weather data
@@ -28,7 +29,6 @@ Weather frontend application is build on below mentioned modules
 ### Features to Integrate
 
   - SSR (Server Side Rendering) for SEO
-  - Add Nightmode theme
 
 ### Installation
 
